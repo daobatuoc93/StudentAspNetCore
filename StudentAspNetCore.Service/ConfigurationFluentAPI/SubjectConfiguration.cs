@@ -13,7 +13,7 @@ namespace StudentAspNetCore.Service.ConfigurationFluentAPI
         {
             builder.ToTable("Subjects");
             builder.HasKey(x => x.Id).HasName("SubjectsID");
-            builder.Property(x => x.NameSubject).IsRequired().HasMaxLength(30);//default == true 
+            builder.Property(x => x.NameSubject).HasMaxLength(30);//default == true 
             builder.HasOne<StudentSubject>(a => a.StudentSubject).WithOne(wo => wo.Subject).HasForeignKey<StudentSubject>(fk => fk.SubjectId);
 
         }

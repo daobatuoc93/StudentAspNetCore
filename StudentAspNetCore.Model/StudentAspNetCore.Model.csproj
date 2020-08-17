@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StudentAspNetCore.Service\StudentAspNetCore.Service.csproj" />
+    <ProjectReference Include="..\StudentAspNetCore\StudentAspNetCore.csproj" />
+    <ProjectReference Include="..\ViewModels\StudentAspNetCore.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Information\generals\" />
+  </ItemGroup>
+
+</Project>

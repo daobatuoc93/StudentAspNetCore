@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StudentAspNetCore.Service.EntityFrameworkDB;
 
 namespace StudentAspNetCore.Service.Migrations
 {
     [DbContext(typeof(StudentAspNetCoreDbContext))]
-    partial class StudentAspNetCoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200817120411_AddNewdata")]
+    partial class AddNewdata
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -90,6 +92,7 @@ namespace StudentAspNetCore.Service.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("City")
+                        .IsRequired()
                         .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
 
@@ -197,6 +200,7 @@ namespace StudentAspNetCore.Service.Migrations
                         .HasColumnType("varbinary(max)");
 
                     b.Property<byte[]>("Photo")
+                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.Property<int>("StudentId")
@@ -324,6 +328,7 @@ namespace StudentAspNetCore.Service.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Result")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Score")
@@ -423,6 +428,7 @@ namespace StudentAspNetCore.Service.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("NameSubject")
+                        .IsRequired()
                         .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
 

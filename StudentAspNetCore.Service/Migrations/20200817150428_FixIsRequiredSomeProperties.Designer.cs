@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StudentAspNetCore.Service.EntityFrameworkDB;
 
 namespace StudentAspNetCore.Service.Migrations
 {
     [DbContext(typeof(StudentAspNetCoreDbContext))]
-    partial class StudentAspNetCoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200817150428_FixIsRequiredSomeProperties")]
+    partial class FixIsRequiredSomeProperties
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

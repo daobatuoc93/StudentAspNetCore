@@ -22,7 +22,6 @@ namespace StudentAspNetCore.Service.ConfigurationFluentAPI
             builder.HasOne<Address>(a => a.Address).WithOne(wo => wo.Student).HasForeignKey<Address>(fk => fk.StudentId);
             builder.HasOne<Account>(a => a.Account).WithOne(wo => wo.Student).HasForeignKey<Account>(fk => fk.StudentId);
             builder.HasOne<Contact>(a => a.Contact).WithOne(wo => wo.Student).HasForeignKey<Contact>(fk => fk.StudentId);
-
         }
     }
 }

@@ -10,7 +10,7 @@ namespace StudentAspNetCore.Service.ConfigurationFluentAPI
         {
             builder.ToTable("Addresss");
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.City).IsRequired().HasMaxLength(30);//default == true
+            builder.Property(x => x.City).HasMaxLength(30);//default == true
             builder.Property(x => x.State);//default == true
             builder.Property(em => em.Email).IsRequired().HasMaxLength(50);
             builder.Property(x => x.Zip).HasMaxLength(10);//default == true

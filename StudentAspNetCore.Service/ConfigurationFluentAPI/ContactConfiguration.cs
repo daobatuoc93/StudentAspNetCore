@@ -12,7 +12,7 @@ namespace StudentAspNetCore.Service.ConfigurationFluentAPI
         {
             builder.ToTable("Contacts");
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Url).IsRequired().HasMaxLength(30);//default == true
+            builder.Property(x => x.Url);//default == true
             builder.Property(x => x.PhoneNumber).IsRequired().HasMaxLength(10);//default == true
             //Noted that we need to change 1-1
             //builder.HasOne(s => s.Student).WithOne(x => x.Contact);

@@ -30,7 +30,8 @@ namespace StudentAspNetCore.Service.EntityFrameworkDB
         public DbSet<Account> Accounts { get; set; }
 
         public DbSet<Subject> Subjects { get; set; }
-        public DbSet<Address> Contacts { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
 
         public DbSet<Image> Images { get; set; }
         public DbSet<StudentSubject> StudentSubjects { get; set; }

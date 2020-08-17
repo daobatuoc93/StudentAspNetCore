@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using StudentAspNetCore.Service.Entity;
-using StudentAspNetCore.Service.Enums;
+using StudentAspNetCore.Service.Further;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,7 +28,7 @@ namespace StudentAspNetCore.Service.StudentDataSeeding
                     Id = 2,
                     FirstName = "Nguyen",
                     LastName = "Thi Lan Anh",
-                    Year = Enums.GradeLevel.SecondYear,
+                    Year = GradeLevel.SecondYear,
                     SchoolId = 2,
                 },
                 new Student()
@@ -36,7 +36,7 @@ namespace StudentAspNetCore.Service.StudentDataSeeding
                     Id = 3,
                     FirstName = "Thai",
                     LastName = "Van Lung",
-                    Year = Enums.GradeLevel.FourthYear,
+                    Year = GradeLevel.FourthYear,
                     SchoolId =3,
                 });
             modelBuilder.Entity<Account>().HasData(
@@ -251,7 +251,25 @@ namespace StudentAspNetCore.Service.StudentDataSeeding
                     DateExam = new DateTime(2020, 05, 20),
                     Result = "Pass"
                 });
-            
+            modelBuilder.Entity<Contact>().HasData(
+                new Contact
+                {
+                    Id = 1,
+                    PhoneNumber = "094289194",
+                    StudentId = 1,
+                },
+                new Contact
+                {
+                    Id = 2,
+                    PhoneNumber = "093258233",
+                    StudentId = 2,
+                },
+                new Contact
+                {
+                    Id = 3,
+                    PhoneNumber = "038129492",
+                    StudentId = 3,
+                });
         }
     }
 }

@@ -31,7 +31,7 @@ namespace StudentAspNetCore.Service.ConfigurationFluentAPI
         {
             builder.ToTable("Images");
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Photo).IsRequired();//default == true
+            builder.Property(x => x.Photo);//default == true
             builder.Property(x => x.CurriculumVitae);        
         }
     }

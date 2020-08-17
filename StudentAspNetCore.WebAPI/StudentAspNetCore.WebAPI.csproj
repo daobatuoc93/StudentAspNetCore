@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StudentAspNetCore.Model\StudentAspNetCore.Model.csproj" />
+    <ProjectReference Include="..\StudentAspNetCore.Service\StudentAspNetCore.Service.csproj" />
+    <ProjectReference Include="..\ViewModels\StudentAspNetCore.ViewModels.csproj" />
+  </ItemGroup>
+
+
+</Project>
