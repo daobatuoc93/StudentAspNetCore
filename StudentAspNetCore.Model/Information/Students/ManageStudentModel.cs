@@ -102,13 +102,16 @@ namespace StudentAspNetCore.Model.Information.Students
         {
             var student = await _context.Students.FindAsync(request.Id);            
             var studentAddress = await _context.Addresses.FirstOrDefaultAsync(id => id.StudentId == request.Id);
+            var studentSchool = await _context.Schools.FirstOrDefaultAsync(id => id.Id == request.Id);
+            var studentContact = await _context.Contacts.FirstOrDefaultAsync(id => id.StudentId == request.Id);
+            var studentAccount = await _context.Accounts.FirstOrDefaultAsync(id => id.StudentId == request.Id);
             if (student == null)
                 throw new StudentException($"The student with {request.Id} is not existing to update database! ");
             student.FirstName = request.FirstName;
             student.LastName = request.LastName;
             student.Address.Email = request.Email;
-            student.Account = student.Account;
-            student.Contact = student.Contact;
+            student.School.NameSchool = request.NameSchool;
+            student.Contact.PhoneNumber = request.PhoneNumber;
             return await _context.SaveChangesAsync();
         }        
     }
